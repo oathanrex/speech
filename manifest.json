@@ -1,0 +1,31 @@
+{
+    "name": "Speech to Text - Free Voice Typing Tool",
+    "short_name": "Speech to Text",
+    "description": "Free speech-to-text editor for long writing sessions. Supports 100+ languages. No sign-up required.",
+    "start_url": ".",
+    "id": "/speech/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0066cc",
+    "orientation": "any",
+    "scope": ".",
+    "lang": "en",
+    "categories": ["productivity", "utilities"],
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%230066cc' width='512' height='512' rx='80'/><text x='256' y='340' text-anchor='middle' fill='white' font-family='system-ui' font-size='280' font-weight='bold'>S</text></svg>",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%230066cc' width='192' height='192' rx='32'/><text x='96' y='130' text-anchor='middle' fill='white' font-family='system-ui' font-size='110' font-weight='bold'>S</text></svg>",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ],
+    "screenshots": [],
+    "related_applications": [],
+    "prefer_related_applications": false
+}
