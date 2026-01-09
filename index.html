@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple, distraction-free speech-to-text editor for long writing sessions.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+    <title>Speech to Text</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1 class="product-name">Speech to Text</h1>
+            <div class="header-controls">
+                <div class="language-selector">
+                    <label for="language-search" class="visually-hidden">Search languages</label>
+                    <input 
+                        type="text" 
+                        id="language-search" 
+                        class="language-search" 
+                        placeholder="Search languages..."
+                        autocomplete="off"
+                    >
+                    <label for="language-select" class="visually-hidden">Select language</label>
+                    <select id="language-select" class="language-dropdown">
+                        <option value="">Select language</option>
+                    </select>
+                </div>
+                <button type="button" id="theme-toggle" class="theme-toggle">
+                    Dark mode
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="editor-container">
+                <label for="editor" class="visually-hidden">Text editor</label>
+                <textarea 
+                    id="editor" 
+                    class="editor" 
+                    placeholder="Start dictating or type here..."
+                    spellcheck="true"
+                ></textarea>
+                <div id="interim-text" class="interim-text" aria-live="polite" aria-atomic="true"></div>
+            </div>
+
+            <div class="control-bar">
+                <button type="button" id="dictation-toggle" class="control-button primary" disabled>
+                    Start Dictation
+                </button>
+                <button type="button" id="clear-button" class="control-button">
+                    Clear
+                </button>
+                <button type="button" id="copy-button" class="control-button">
+                    Copy
+                </button>
+                <button type="button" id="export-button" class="control-button">
+                    Export (.txt)
+                </button>
+                <button type="button" id="new-session-button" class="control-button">
+                    New Session
+                </button>
+            </div>
+
+            <div class="word-target-bar">
+                <label for="word-target-input" class="word-target-label">Target:</label>
+                <input 
+                    type="number" 
+                    id="word-target-input" 
+                    class="word-target-input" 
+                    placeholder="e.g. 1000"
+                    min="1"
+                >
+                <button type="button" id="word-target-set" class="control-button small">
+                    Set
+                </button>
+                <button type="button" id="word-target-clear" class="control-button small">
+                    Clear target
+                </button>
+            </div>
+
+            <div class="status-bar">
+                <div id="status-line" class="status-line" aria-live="polite" aria-atomic="true">
+                    Initializing...
+                </div>
+                <div id="stats-display" class="stats-display" aria-live="polite">
+                    0 words · 0 characters
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <span class="author">Oathan Rex</span>
+                <nav class="footer-links" aria-label="External links">
+                    <a href="#" id="previous-sessions-link" style="display: none;">Previous sessions</a>
+                    <a href="https://github.com/oathanrex" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://oathanrex.github.io" target="_blank" rel="noopener noreferrer">Website</a>
+                    <a href="https://youtube.com/@oathanrex" target="_blank" rel="noopener noreferrer">YouTube</a>
+                    <a href="https://codepen.io/OathanRex" target="_blank" rel="noopener noreferrer">CodePen</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/speech.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
