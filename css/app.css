@@ -102,7 +102,6 @@ body {
 .language-selector {
     position: relative;
     display: flex;
-    flex-direction: column;
     gap: var(--spacing-xs);
 }
 
@@ -405,6 +404,7 @@ body {
 
     .language-selector {
         width: 100%;
+        flex-direction: column;
     }
 
     .language-search,
